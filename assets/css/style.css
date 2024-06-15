@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Reseta as margens e os paddings e define a fonte padrão */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+}
+
+/* Container principal */
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-image: linear-gradient(135deg,#26465367 50%,#2A9D8F50 50%),
+    url(./imgs/modern-bookstore-showcasing-rows-vibrant-books\ \(1\).jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Estilos dos formulários */
+.form-login, .form-cadastro {
+    display: flex;
+    height: 500px;
+    width: 900px;
+    background-color: #264653;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    border-radius: 25px;
+}
+
+/* Estilos dos forms */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 70px;
+}
+
+/* Estilos dos títulos */
+#h1-login, #h1-cadastro {
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+#h1-login {
+    align-items: center;
+    padding: 60px 0px 70px 80px;
+}
+
+#h1-cadastro {
+    margin-left: 90px;
+    margin-top: 60px;
+}
+
+/* Container dos inputs */
+.input-container {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.input-container .icons {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+}
+
+.input-container input {
+    width: 100%;
+    padding-left: 40px;
+    height: 30px;
+    outline: 0;
+    border: none;
+    background-color: #264653;
+    border-bottom: 1px solid #2A9D8F;
+    color: white;
+}
+
+.input-container:hover input::placeholder, 
+.input-container:hover input {
+    color: #E76F51;
+}
+
+input::placeholder {
+    color: white;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+/* Estilos do botão */
+.btn-forms{
+    width: 200px;
+    height: 40px;
+    margin-left: 50px;
+    background-color: #2A9D8F;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #E76F51;
+}
+
+/* Formulário de cadastro oculto por padrão */
+.form-cadastro {
+    display: none;
+}
+
+/* Estilos do painel de troca de inputs */
+.mudar-inputs {
+    position: absolute;
+    width: 450px;
+    height: 500px;
+    background-color: #E76F51;
+    right: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+    border-top-left-radius: 20%;
+    border-bottom-left-radius: 20%;
+    color: white;
+}
+
+.mudar-inputs button {
+    width: auto;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.mudar-inputs button:hover {
+    background-color: white;
+    color: #E76F51;
+}
+
+/* Media queries para responsividade */
+
+/* Para dispositivos com largura máxima de 440px */
+@media (max-width: 440px) {
+
+    .container{
+        background: none;
+    }
+
+    .form-login, .form-cadastro {
+        height: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    form {
+        width: 300px;
+    }
+
+    .btn-forms {
+        height: 30px;
+    }
+
+    .mudar-inputs {
+        position: relative;
+        width: 400px;
+        height: 80px;
+        left: 0;
+        top: 200px;
+        font-size: 1rem;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        background: none;
+    }
+
+    #mudar-h1 {
+        display: none;
+    }
+
+    .mudar-inputs button {
+        width: auto;
+        padding: 5px 10px;
+    }
+
+    #h1-login,#h1-cadastro{
+        padding: 0;
+        margin: 0;
+    }
+
+    .form-cadastro input {
+        height: 20px;
+    }
+
+    .form-cadastro form {
+        margin-bottom: 70px;
+    }
+
+    .input-container input {
+        padding-left: 0;
+    }
+
+    .input-container input[type="date"] {
+        text-align: center;
+    }
+
+    .input-container .icons {
+        width: 0;
+    }
+
+    input::placeholder {
+        text-align: center;
+    }
+
+    .btn-forms{
+        margin-left: 50px;
+    }
+}
+
+/* Para dispositivos com largura entre 440px e 1024px */
+@media (min-width: 440px) and (max-width: 1024px) {
+    .form-login, .form-cadastro {
+        height: 500px;
+        width: 400px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .form-login form {
+        padding-bottom: 110px;
+    }
+
+    form {
+        width: 300px;
+    }
+
+    .btn-forms {
+        height: 30px;
+    }
+
+    .mudar-inputs {
+        position: relative;
+        width: 400px;
+        height: 80px;
+        left: 0;
+        top: 200px;
+        font-size: 1rem;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        background: none;
+    }
+
+    #mudar-h1 {
+        display: none;
+    }
+
+    .mudar-inputs button {
+        width: auto;
+        padding: 5px 10px;
+    }
+
+   
+    #h1-login,#h1-cadastro{
+        padding: 0;
+        margin: 0;
+    }
+
+    #h1-cadastro{
+        margin-top: 20px;
+    }
+
+    .form-cadastro input {
+        height: 20px;
+    }
+
+    .form-cadastro form {
+        margin-bottom: 70px;
+    }
+
+    .input-container input {
+        padding-left: 0;
+    }
+
+    .input-container input[type="date"] {
+        text-align: center;
+    }
+
+    .input-container .icons {
+        width: 0;
+    }
+
+    input::placeholder {
+        text-align: center;
+    }
+
+    form .btn-forms{
+        margin-left: 50px;
+    }
+}
+
+/* Para dispositivos com largura entre 1024px e 1300px */
+@media (min-width: 1024px) and (max-width: 1300px) {
+    .mudar-inputs {
+        right: 5%;
+    }
+}
+
+@media (min-width: 1400px) and (max-width: 1800px){
+    .mudar-inputs {
+        right: 15%;
+    }
+}
+
+@media (min-width: 1900px){
+    .mudar-inputs {
+        right: 25%;
+    }
+}

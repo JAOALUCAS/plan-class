@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Tiny5&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    background-image: url(imgs/lofi\ sad\ gif.gif);
+    background-size: cover;
+}
+
+.cabecalho{
+    width: 100vw;
+    height: 100px;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    color: #d35400;
+    align-items: center;
+    box-shadow: 0px 1px #e67e22;
+    background-color: rgba(255, 255, 255, 0.589);
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo h1{
+    padding-top: 10px;
+    font-family: "Roboto Condensed", sans-serif
+}
+
+.logo img{
+    height: 60px;
+}
+
+.logo:hover{
+    color: white;
+    
+}
+
+.logo:hover img{
+     animation: fall 2s normal;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+.buttons {
+    display: flex;
+    margin-left: 550px;
+}
+
+.buttons button{
+    display: flex;
+    align-items: center;
+    border: none;
+    color:  #d35400;
+    width: 200px;
+    background-color: transparent;
+    height: 50px;
+    font-size: large;
+}
+
+#conf{
+    margin-right: 30px;
+}
+
+a{
+    text-decoration: none;
+}
+
+#sair img{
+    padding-left: 40px;
+}
+
+.buttons button:hover{
+    color: white;
+}
+
+.conteudo{
+    width: 1200px;
+    height: 470px;
+    background-color: #264653bd;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+    position: absolute;
+    top: 25%;
+    left: 5%;
+}
+
+.conteudo-cima{
+    display: flex;
+    width: 1200px;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+#h1-conteudo{
+    width: 200px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-left: 50px;
+    font-family: Helvetica;
+    color: #E76F51;
+}
+
+.adicionar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    border: none;
+    font-family: Helvetica;
+    font-size: 1rem;
+    background-color: #e26a4c;
+    color: white;
+    margin-right: 50px;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+.adicionar:hover{
+    background-color: #2A9D8F;
+}
+
+.tabela{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 50px 100px 50px;
+    width: 1100px;
+    background-color: aqua;
+}
+
+#tabela{
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+}
+
+thead{
+    height: 50px;
+    text-align: center;
+    width: inherit;
+    display: flex;
+    background-color: #E76F51;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+th{
+    font-size: 1rem;
+    padding: 10px 80px 10px 80px;
+}
+
+.form{
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 400px;
+    height: 570px;
+    background-color: #264653;
+    z-index: 3;
+    bottom: 10%;
+    right: 32%;
+    flex-direction: column;
+    color: white;
+}
+
+.form input{
+    background-color: #264653;
+    border-bottom: 1px solid #2A9D8F;
+    color: white;
+}
+
+.form .adicionar{
+    background-color:  #E76F51;
+    width: 200px;
+    height: 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form .adicionar:hover {
+    background-color: #2A9D8F;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+.form h1{
+    padding-top: 30px;
+}
+
+.form .adicionar{
+    margin: 40px 0px 0px 100px;
+}
+
+.input-container{
+    width: inherit;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+input{
+    width: 370px;
+    outline: 0;
+    border: none;
+    padding-top: 10px;
+}
+
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+#fechar-overlay{
+    display: none;
+    font-size: 2rem;
+    top: -30%;
+    right: -5%;
+    color: white;
+    position: absolute;
+    z-index: 2;
+    cursor: pointer;
+}
+
+
+
