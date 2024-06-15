@@ -22,4 +22,33 @@ document.addEventListener("DOMContentLoaded",()=>{
 
     });
 
+    const imgConf =  document.getElementById("conf");
+    const imgSair = document.getElementById("sair");
+
+    imgConf.addEventListener("mouseover", ()=>{
+
+        imgConf.src = "assets/icons/engrenagem.jpg";
+
+    });
+
+    imgConf.addEventListener("mouseout",()=>{
+
+        
+        imgConf.src = "assets/icons/engrenagem-laranja.jpg";
+
+    });
+
+    imgSair.addEventListener("mouseover", ()=>{
+
+        imgSair.src = "assets/icons/perfil.jpg";
+
+    });
+
+    imgSair.addEventListener("mouseout",()=>{
+
+        
+        imgSair.src = "assets/icons/perfil-laranja.jpg";
+
+    });
+
 });
