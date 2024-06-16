@@ -22,32 +22,34 @@ document.addEventListener("DOMContentLoaded",()=>{
 
     });
 
-    const imgConf =  document.getElementById("conf");
-    const imgSair = document.getElementById("sair");
+    const conf = document.getElementById("conf");
+    const sair = document.getElementById("sair");
+    const imgConf =  document.getElementById("img-conf");
+    const imgSair = document.getElementById("img-sair");
 
-    imgConf.addEventListener("mouseover", ()=>{
+    conf.addEventListener("mouseover", ()=>{
 
-        imgConf.src = "assets/icons/engrenagem.jpg";
+        imgConf.src = "assets/icons/engrenagem.png";
 
     });
 
-    imgConf.addEventListener("mouseout",()=>{
+    conf.addEventListener("mouseout",()=>{
 
         
-        imgConf.src = "assets/icons/engrenagem-laranja.jpg";
+        imgConf.src = "assets/icons/engrenagem-laranja.png";
 
     });
 
-    imgSair.addEventListener("mouseover", ()=>{
+    sair.addEventListener("mouseover", ()=>{
 
-        imgSair.src = "assets/icons/perfil.jpg";
+        imgSair.src = "assets/icons/perfil.png";
 
     });
 
-    imgSair.addEventListener("mouseout",()=>{
+    sair.addEventListener("mouseout",()=>{
 
         
-        imgSair.src = "assets/icons/perfil-laranja.jpg";
+        imgSair.src = "assets/icons/perfil-laranja.png";
 
     });
 

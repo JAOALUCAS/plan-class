@@ -151,7 +151,6 @@ a{
     align-items: center;
     margin: 100px 50px 100px 50px;
     width: 1100px;
-    background-color: aqua;
 }
 
 #tabela{
@@ -173,7 +172,32 @@ thead{
 
 th{
     font-size: 1rem;
-    padding: 10px 80px 10px 80px;
+    padding: 10px 50px 10px 50px;
+}
+
+tr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 50px;
+}
+
+td{
+    font-size: 1em;
+    padding: 10px 50px;
+}
+
+tbody{
+    text-align: center;
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgb(255, 252, 252);
+}
+
+  
+tbody tr:nth-child(odd) {
+    background-color: rgb(153, 150, 150);
 }
 
 .form{

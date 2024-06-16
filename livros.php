@@ -1,6 +1,7 @@
 <?php
 
-    include('./src/protect.php');
+    include('./src/controllers/protect.php');
+    require_once './src/Conexao.php';
 
 ?>
 
@@ -22,8 +23,8 @@
                 <h1>BIBIOTECA DE BABEL</h1>
             </div>
             <div class="buttons">
-                <button id="conf"><img src="assets/icons/engrenagem-laranja.png">CONFIGURAÇÕES</button>
-                <a href="src/logout.php"><button id="sair"><img src="assets/icons/perfil-laranja.png">SAIR</button></a>
+                <button id="conf"><img src="assets/icons/engrenagem-laranja.png" id="img-conf">CONFIGURAÇÕES</button>
+                <a href="src/controllers/logout.php"><button id="sair"><img src="assets/icons/perfil-laranja.png" id="img-sair">SAIR</button></a>
             </div>
         </div>
 
@@ -38,15 +39,44 @@
                 <table id="tabela">
                     <thead>
                         <tr>
-                            <th>Id</th>
                             <th>Autor</th>
                             <th>Titulo</th>
                             <th>Subtitulo</th>
+                            <th>Edição</th>
+                            <th>Editora</th>
                             <th>Data de inserção</th>
                         </tr>
                     </thead>
                     <tbody>
+                        <?php
 
+                            $mysql = 'SELECT * FROM biblioteca WHERE usuario_id = :usuario_id';
+
+                            $pdo = Conexao::conectar('./src/conf.ini');
+        
+                            $stmt = $pdo->prepare($mysql);
+                        
+                            $qtdLinhas = $stmt->execute([
+                               ':usuario_id' => $_SESSION['id']
+                            ]);
+                        
+                            while($linha = $stmt->fetch()){
+
+                                echo "
+                                    <tr>
+                                        <td>$linha[autor]</td>
+                                        <td>$linha[titulo]</td>
+                                        <td>$linha[subtitulo]</td>
+                                        <td>$linha[edicao]</td>
+                                        <td>$linha[editora]</td>
+                                        <td>$linha[data_de_publicacao]</td>
+                                    </tr>
+                                
+                                ";
+
+                            }
+
+                        ?>
                     </tbody>
                 </table>
             </div>
@@ -59,7 +89,7 @@
 
             <div class="form" id="div-form">
 
-                <form action="src/adicionarLivro.php" method="post">
+                <form action="src/controllers/adicionarLivro.php" method="post">
 
                     <h1>Adicionar Livro</h1>
 

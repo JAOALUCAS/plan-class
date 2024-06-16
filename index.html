@@ -15,7 +15,7 @@
     
         <div class="form-login" id="form-login">
             <h1 id="h1-login">Bem vindo de volta!</h1>
-            <form action="src/logar.php" method="post" id="form">
+            <form action="src/controllers/logar.php" method="post" id="form">
                 <div class="input-container">
                     <img src="assets/icons/e-mail.png" alt="email" class="icons">
                     <input type="email" name="email" placeholder="Digite seu email">
@@ -26,18 +26,13 @@
                     <input type="password" name="senha"  placeholder="Digite sua senha">
                 </div>
 
-                <div class="input-container">
-                    <img src="assets/icons/trancar.png" alt="confirmar senha" id="confirmarsenha" class="icons">
-                    <input type="password" name="confirmarsenha" placeholder="Confirme sua senha">
-                </div>
-
-                <button class="btn-forms">Entrar</button>
+                <button class="btn-forms" id="entrar">Entrar</button>
             </form>
         </div>
 
         <div class="form-cadastro" id="form-cadastro">
             <h1 id="h1-cadastro">Cadastre-se Agora!</h1>
-            <form action="src/cadastro.php" method="post">
+            <form action="src/controllers/cadastro.php" method="post">
                 <div class="input-container">
                     <img src="assets/icons/perfil.png" alt="nome de cadastro" class="icons">
                     <input type="text" placeholder="Digite seu nome" name="nomedecadastro" required>
@@ -54,8 +49,8 @@
                 </div>
 
                 <div class="input-container">
-                    <img src="assets/icons/calendario.png" alt="data de nascimento" class="icons">
-                    <input type="date" name="novadata">
+                    <img src="assets/icons/trancar.png" alt="confirmar senha" id="confirmarsenha" class="icons">
+                    <input type="password" name="confirmarsenha" placeholder="Confirme sua senha">
                 </div>
 
                 <button class="btn-forms">Cadastra-se</button>

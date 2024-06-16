@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-/* Reseta as margens e os paddings e define a fonte padrão */
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +7,6 @@
     font-weight: bold;
 }
 
-/* Container principal */
 .container {
     height: 100vh;
     display: flex;
@@ -21,7 +19,6 @@
     background-position: center;
 }
 
-/* Estilos dos formulários */
 .form-login, .form-cadastro {
     display: flex;
     height: 500px;
@@ -33,7 +30,6 @@
     border-radius: 25px;
 }
 
-/* Estilos dos forms */
 form {
     display: flex;
     flex-direction: column;
@@ -41,7 +37,6 @@ form {
     padding: 70px;
 }
 
-/* Estilos dos títulos */
 #h1-login, #h1-cadastro {
     color: white;
     display: flex;
@@ -58,7 +53,6 @@ form {
     margin-top: 60px;
 }
 
-/* Container dos inputs */
 .input-container {
     position: relative;
     margin-bottom: 40px;
@@ -92,11 +86,6 @@ input::placeholder {
     color: white;
 }
 
-input[type="date"]::-webkit-calendar-picker-indicator {
-    display: none;
-}
-
-/* Estilos do botão */
 .btn-forms{
     width: 200px;
     height: 40px;
@@ -113,16 +102,18 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     transition: background-color 0.3s;
 }
 
+#entrar{
+    margin-top: 50px;
+}
+
 form button:hover {
     background-color: #E76F51;
 }
 
-/* Formulário de cadastro oculto por padrão */
 .form-cadastro {
     display: none;
 }
 
-/* Estilos do painel de troca de inputs */
 .mudar-inputs {
     position: absolute;
     width: 450px;
@@ -156,9 +147,6 @@ form button:hover {
     color: #E76F51;
 }
 
-/* Media queries para responsividade */
-
-/* Para dispositivos com largura máxima de 440px */
 @media (max-width: 440px) {
 
     .container{
@@ -217,10 +205,6 @@ form button:hover {
         padding-left: 0;
     }
 
-    .input-container input[type="date"] {
-        text-align: center;
-    }
-
     .input-container .icons {
         width: 0;
     }
@@ -234,7 +218,6 @@ form button:hover {
     }
 }
 
-/* Para dispositivos com largura entre 440px e 1024px */
 @media (min-width: 440px) and (max-width: 1024px) {
     .form-login, .form-cadastro {
         height: 500px;
@@ -298,10 +281,6 @@ form button:hover {
         padding-left: 0;
     }
 
-    .input-container input[type="date"] {
-        text-align: center;
-    }
-
     .input-container .icons {
         width: 0;
     }
@@ -315,7 +294,6 @@ form button:hover {
     }
 }
 
-/* Para dispositivos com largura entre 1024px e 1300px */
 @media (min-width: 1024px) and (max-width: 1300px) {
     .mudar-inputs {
         right: 5%;
