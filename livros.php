@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biblioteca de Babel</title>
     <link rel="stylesheet" href="./assets/css/livros.css">
+    <link rel="shortcut icon" href="/assets/ico/icons8-livros-64.ico" type="image/x-icon">
     <script src="assets/js/livros.js"></script>
 </head>
 <body>
@@ -45,6 +46,8 @@
                             <th>Edição</th>
                             <th>Editora</th>
                             <th>Data de inserção</th>
+                            <th>Editar</th>
+                            <th>Excluir</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -70,6 +73,13 @@
                                         <td>$linha[edicao]</td>
                                         <td>$linha[editora]</td>
                                         <td>$linha[data_de_publicacao]</td>
+                                        <input type='hidden' name='id' class='valor-php' value='{$linha["id"]}'>
+                                        <td><button class='lapis'><img src='assets/icons/lapis.png' class='img-lapis'></button></td>
+                                        <td>
+                                        <form action='./src/controllers/excluirLivro.php' method='post'>
+                                            <input type='hidden' name='id' value='{$linha['id']}'>
+                                            <button class='lixo'><img src='assets/icons/lixo.png' class='img-lixo'></button></td>
+                                        </form>
                                     </tr>
                                 
                                 ";
@@ -94,37 +104,69 @@
                     <h1>Adicionar Livro</h1>
 
                     <div class="input-container">
-                        <label for="autor">Autor:</label>
-                        <input type="text" name="autor" id="autor"  required>
+                        <input type="text" name="autor" id="autor" placeholder="Nome do autor" required>
                     </div>
 
                     <div class="input-container">
-                        <label for="titulo">Título:</label>
-                        <input type="text" name="titulo" id="titulo"  required>
+                        <input type="text" name="titulo" id="titulo" placeholder="Titulo do livro" required>
                     </div>
 
                     <div class="input-container">
-                        <label for="subtitulo">Subtítulo:</label>
-                        <input type="text" name="subtitulo"  id="subtitulo" required>
+                        <input type="text" name="subtitulo"  id="subtitulo" placeholder="Nome do subtitulo" required>
                     </div>
 
                     <div class="input-container">
-                        <label for="edicao">Edição:</label>
-                        <input type="text" name="edicao" id="edicao" required>
+                        <input type="text" name="edicao" id="edicao" placeholder="Nome da edição" required>
                     </div>
 
                     <div class="input-container">
-                        <label for="editora">Editora:</label>
-                        <input type="text" name="editora" id="editora" required>
+                        <input type="text" name="editora" id="editora" placeholder="Nome da editora" required>
                     </div>
 
                     <div class="input-container">
-                        <label for="data">Ano de publicação:</label>
                         <input type="date" name="data" id="data" required>
                     </div>
                                     
                     <button type="submit" class="adicionar">Adicionar Livro</button>
                 </form>
+                
+            </div>
+
+            <div class="form" id="div-form-editar">
+
+                <form action="src/controllers/editarLivro.php" id="editar" method="post">
+
+                    <h1>Editar Livro</h1>
+
+                    <input type="hidden" name="id" id="input-editar-id">
+
+                    <div class="input-container">
+                        <input type="text" name="autor" id="autor" placeholder="Nome do autor" required>
+                    </div>
+
+                    <div class="input-container">
+                        <input type="text" name="titulo" id="titulo" placeholder="Titulo do livro" required>
+                    </div>
+
+                    <div class="input-container">
+                        <input type="text" name="subtitulo"  id="subtitulo" placeholder="Nome do subtitulo" required>
+                    </div>
+
+                    <div class="input-container">
+                        <input type="text" name="edicao" id="edicao" placeholder="Nome da edição" required>
+                    </div>
+
+                    <div class="input-container">
+                        <input type="text" name="editora" id="editora" placeholder="Nome da editora" required>
+                    </div>
+
+                    <div class="input-container">
+                        <input type="date" name="data" id="data" required>
+                    </div>
+                                    
+                    <button type="submit" class="adicionar">Editar Livro</button>
+                </form>
+                
             </div>
            
         </div>
@@ -133,3 +175,4 @@
 
 </body>
 </html>
+

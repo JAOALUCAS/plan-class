@@ -97,7 +97,7 @@ a{
     color: white;
 }
 
-.conteudo{
+.conteudo {
     width: 1200px;
     height: 470px;
     background-color: #264653bd;
@@ -105,6 +105,8 @@ a{
     position: absolute;
     top: 25%;
     left: 5%;
+    overflow-y: auto; /* Adicionado para permitir rolagem vertical */
+    overflow-x: hidden; /* Adicionado para esconder a rolagem horizontal */
 }
 
 .conteudo-cima{
@@ -145,59 +147,54 @@ a{
     background-color: #2A9D8F;
 }
 
-.tabela{
+.tabela {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 100px 50px 100px 50px;
+    margin: 100px 50px;
     width: 1100px;
+    overflow-x: auto; /* Adicionado para permitir rolagem horizontal, se necessário */
 }
 
-#tabela{
-    width: inherit;
-    display: flex;
-    flex-direction: column;
+#tabela {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; 
 }
 
-thead{
-    height: 50px;
-    text-align: center;
-    width: inherit;
-    display: flex;
+thead {
     background-color: #E76F51;
     color: white;
-    justify-content: center;
-    align-items: center;
 }
 
-th{
-    font-size: 1rem;
-    padding: 10px 50px 10px 50px;
-}
-
-tr{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 50px;
-}
-
-td{
-    font-size: 1em;
-    padding: 10px 50px;
-}
-
-tbody{
+th, td {
+    padding: 10px;
     text-align: center;
+    word-wrap: break-word; 
+}
+
+td button {
+    background-color: transparent;
+    width: 30px; 
+    border: none;
+    cursor: pointer;
+}
+
+td button img {
+    width: 20px;
 }
 
 tbody tr:nth-child(even) {
     background-color: rgb(255, 252, 252);
 }
 
-  
 tbody tr:nth-child(odd) {
     background-color: rgb(153, 150, 150);
+}
+
+tbody{
+    height: 100px;
+    overflow-y: auto;
 }
 
 .form{
@@ -239,18 +236,15 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     display: none;
 }
 
-.form h1{
-    padding-top: 30px;
-}
-
 .form .adicionar{
-    margin: 40px 0px 0px 100px;
+    margin: 60px 0px 0px 100px;
 }
 
 .input-container{
     width: inherit;
-    margin-top: 20px;
+    margin-top: 35px;
     flex-wrap: wrap;
+    color: white;
 }
 
 input{
@@ -260,6 +254,14 @@ input{
     padding-top: 10px;
 }
 
+input::placeholder{
+    color: white;
+}
+
+.input-container:hover input::placeholder, 
+.input-container:hover input {
+    color: #E76F51;
+}
 
 .overlay {
     display: none;
@@ -282,6 +284,3 @@ input{
     z-index: 2;
     cursor: pointer;
 }
-
-
-
