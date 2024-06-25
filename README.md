@@ -9,7 +9,7 @@ Projeto desenvolvido com as linguagens JavaScript e PHP, visando implementar as 
 ## Instruções para Criação das Tabelas
 
 >[!NOTE]
->É importante ressaltar que caso o nome do banco de dados seja diferente de phjas(nome utilizado no [src/conf.ini](https://github.com/JAOALUCAS/plan-class/blob/main/src/conf.ini)) ou >qualquer tipo de alteração como: port, usuário ou senha devem ser feitas antes da criação das tabelas.
+>É importante ressaltar que caso o nome do banco de dados seja diferente de phjas(nome utilizado no [src/conf.ini](https://github.com/JAOALUCAS/plan-class/blob/main/src/conf.ini)) ou qualquer tipo de alteração como: port, usuário ou senha devem ser feitas antes da criação das tabelas.
 
 ### 1. Tabela de Usuários
 
