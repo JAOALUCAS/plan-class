@@ -2,6 +2,8 @@
 
 Projeto desenvolvido com as linguagens JavaScript e PHP, visando implementar as funcionalidades básicas do SQL: CRUD (Create, Read, Update e Delete).
 
+[Desafio Final das Disciplinas de Prog. Web e POO.pdf](https://github.com/user-attachments/files/15976957/Desafio.Final.das.Disciplinas.de.Prog.Web.e.POO.pdf)
+
 
 
 ## Instruções para Criação das Tabelas
