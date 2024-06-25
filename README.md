@@ -2,10 +2,13 @@
 
 Projeto desenvolvido com as linguagens JavaScript e PHP, visando implementar as funcionalidades básicas do SQL: CRUD (Create, Read, Update e Delete).
 
+
+
 ## Instruções para Criação das Tabelas
 
-É importante ressaltar que caso o nome do banco de dados seja diferente de phjas(nome utilizado no src/conf.ini) ou qualquer tipo de alteração como port, usuário ou senha devem ser feitas
-antes da criação das tabelas.
+>[!NOTE]
+>É importante ressaltar que caso o nome do banco de dados seja diferente de phjas(nome utilizado no src/conf.ini) ou qualquer tipo de alteração como port, usuário ou senha devem serfeitas
+>antes da criação das tabelas.
 
 ### 1. Tabela de Usuários
 
